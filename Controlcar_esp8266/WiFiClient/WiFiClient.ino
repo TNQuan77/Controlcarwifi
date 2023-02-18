@@ -9,8 +9,8 @@
 
 using namespace std;
 #ifndef STASSID
-#define STASSID "Mi 9T"
-#define STAPSK "12345678"
+#define STASSID "1311"
+#define STAPSK "13111311"
 #endif
 
 const char *ssid = STASSID;
@@ -39,8 +39,8 @@ void PAGEHOME()
   {
     Serial.print("\nq");
   }
-  else
-    Serial.print("\n0");
+
+  Serial.print("\n0");
   // Direction
   if (d == "up")
   {
@@ -57,6 +57,10 @@ void PAGEHOME()
   else if (d == "right")
   {
     Serial.print("\nR");
+  }
+  else if (d == "stop")
+  {
+    Serial.print("\nE");
   }
 
   server.send(200, "text/html", "coi dt di");
